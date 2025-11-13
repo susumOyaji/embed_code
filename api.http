@@ -1,3 +1,9 @@
 ### ルートパスへのGETリクエスト
 GET http://127.0.0.1:8787/
 Accept: text/plain
+
+###
+### 商品詳細ページから情報を抽出するリクエストの例
+# @name extract
+GET http://127.0.0.1:8787/?url=https://www.uniqlo.com/jp/ja/products/E463233-000/&key=pdp&key=reviews&display=name&display=summary
+Accept: text/plain
