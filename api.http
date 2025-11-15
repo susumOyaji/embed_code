@@ -1,11 +1,15 @@
-### ルートパスへのGETリクエスト
-GET http://127.0.0.1:8787/
-Accept: text/plain
+### 金融データWorkerのテスト
 
-###
-### 商品詳細ページから情報を抽出するリクエストの例
-# @name extract
-GET http://127.0.0.1:8787/?url=https://www.uniqlo.com/jp/ja/products/E463233-000/&key=pdp&key=reviews&display=name&display=summary
-Accept: text/plain
+# ローカル開発サーバー (wrangler dev) が http://127.0.0.1:8787 で実行されていることを前提とします。
 
-#-- https://finance.yahoo.co.jp/quote/5016.T --key code --key name
+### 1. 単一の日本の個別株 (トヨタ自動車: 7203.T) のデータを取得
+GET http://127.0.0.1:8787/?code=7203.T
+Accept: application/json
+
+### 2. 単一の主要指数 (日経平均株価: ^N225) のデータを取得
+GET http://127.0.0.1:8787/?code=^N225
+Accept: application/json
+
+### 3. 複数の銘柄 (トヨタ自動車と日経平均株価) のデータを同時に取得
+GET http://127.0.0.1:8787/?code=7203.T,^N225
+Accept: application/json

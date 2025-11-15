@@ -1,0 +1,1 @@
+This folder contains the built output assets for the worker "embed_code" generated at 2025-11-15T00:45:34.485Z.
