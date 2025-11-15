@@ -7,3 +7,5 @@ Accept: text/plain
 # @name extract
 GET http://127.0.0.1:8787/?url=https://www.uniqlo.com/jp/ja/products/E463233-000/&key=pdp&key=reviews&display=name&display=summary
 Accept: text/plain
+
+#-- https://finance.yahoo.co.jp/quote/5016.T --key code --key name
